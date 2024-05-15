@@ -1,0 +1,10 @@
+version: '3'
+services:
+  nginx:
+    build: ./nginx
+    ports:
+      - "8000:8000"
+    depends_on:
+      - apache
+  apache:
+    build: ./apache
